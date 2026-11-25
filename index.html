@@ -1,1 +1,65 @@
-﻿<h1>NiDawaGani Pharmacy OS - Day 1<h1>
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NiDawaGani Pharmacy OS — Prescription Intake</title>
+  </head>
+  <body>
+    <header>
+      <h1>NiDawaGani Pharmacy OS</h1>
+      <p>Patient Prescription &amp; Dispensing Intake</p>
+    </header>
+
+    <main>
+      <form id="intake-form">
+        <fieldset>
+          <legend>1. Patient Details</legend>
+          <label for="patient-name">Full Name *</label>
+          <input type="text" id="patient-name" name="patientName" required />
+
+          <label for="patient-age">Age (Years) *</label>
+          <input type="number" id="patient-age" name="patientAge" min="0" max="120" required />
+
+          <label for="patient-phone">Phone Number (M-Pesa / SMS Receipt)</label>
+          <input type="tel" id="patient-phone" name="patientPhone" placeholder="07..." />
+        </fieldset>
+
+        <fieldset>
+          <legend>2. Clinical &amp; Safety Check</legend>
+          <label for="allergies">Known Drug Allergies *</label>
+          <input type="text" id="allergies" name="allergies" placeholder="e.g., Penicillin, Sulfa, or None" required />
+
+          <label for="pregnancy-status">Pregnancy / Lactation Status</label>
+          <select id="pregnancy-status" name="pregnancyStatus">
+            <option value="na">Not Applicable</option>
+            <option value="no">No</option>
+            <option value="pregnant">Pregnant</option>
+            <option value="lactating">Lactating</option>
+          </select>
+        </fieldset>
+
+        <fieldset>
+          <legend>3. Medication &amp; Dispensing</legend>
+          <label for="drug-name">Prescribed / Requested Drug *</label>
+          <input type="text" id="drug-name" name="drugName" placeholder="e.g., Cetirizine 10mg" required />
+
+          <label for="dosage">Dosage &amp; Frequency *</label>
+          <input type="text" id="dosage" name="dosage" placeholder="e.g., 1 tab OD for 5 days" required />
+
+          <label for="batch-number">Batch Number</label>
+          <input type="text" id="batch-number" name="batchNumber" />
+
+          <label for="counseling-notes">Pharmacist Counseling Notes</label>
+          <textarea id="counseling-notes" name="counselingNotes" rows="3"></textarea>
+        </fieldset>
+
+        <button type="submit">Log Prescription</button>
+      </form>
+    </main>
+
+    <footer>
+      <small>Powered by NiDawaGani</small>
+    </footer>
+  </body>
+</html>
